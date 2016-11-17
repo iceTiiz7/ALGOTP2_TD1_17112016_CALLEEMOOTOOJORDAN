@@ -1,0 +1,17 @@
+1: Rédifez les phrases expliquant les relation du MCD.
+
+	Eleve [1-N] Classe [1-N]
+	- Un à N élève fréquente un à N classe.
+	- Une à N classe contient un à N élève.
+
+	Classe [1-N] Professeur [0-N]
+	- Une à N classe possède 0 à N profésseur.
+	- 0 à N profésseur enseigne 0 à N classe.
+
+	Matière [0-N] Classe [1-N]
+	- 0 à N matière est édudier par 0 à N classe (0 du aux Week-end / vacances).
+	- Une classe édudie une à N matière.
+
+	Matière [0-N] Professeur [0-N]
+	- 0 à N matière est enseigner par 0 à N professeur.
+	- 0 à N professeur enseigne 0 à N matière.

@@ -1,0 +1,42 @@
+Questions:
+1: Identifier les différents entités et leurs propriétés pour cette gestion
+		- Clients : NumClient - Nom - Prénom - Adresse   
+			[id: Num Client]
+		- Comptes : NumCompte - NumClient - Solde     
+			[id: NumCompte - Ref: NumClient]
+		- Opération : Solde - IDopération - Motant - Date - Retrait(0-1) - Dépot(0-1)   
+			[id: IDopération - Ref: Solde]
+		- Bénéficiaire : NumCompte - NumClient - NumBENE 
+			[id: NumBENE - Ref: NumCompte - Ref: NumClient]
+
+2: Préciser les différentes associations entre les enités et ajouter les propriétés pour les associations porteuses de propriétés.
+
+		- Clients posséde un à N comptes.
+		- Un Compte est possédé par un à N Clients.
+		Relation N-N on créer une nouvelle table Bénéficiaire :
+			- Un client est un bénéficiaire
+			- Un bénéficiaire est un Client
+
+			- Un Bénéficiaire posséde un à N compte
+			- Un Compte est possédé par un à N Bénéficiaire
+
+		- Un Compte stock un solde.
+		- Un solde est stocké dans un compte.
+
+
+3: Préciser les cardanlités pour les différentes associations : MCD.
+		
+		- Clients [0-N] Comptes
+		- Compte [1-N] Clients
+			- Relation N-N donc on créer une table: Bénéficiaire
+
+		- Compte [0-N] Opération
+		- Opération [1-1] Compte
+
+		- Clients [0-1] Bénéficiaire
+		- Bénéficiaire [1-1] Clients
+
+		- Bénéficiaire [1-N] Comptes
+		- Comptes [1-N] Bénéficiaire
+
+		

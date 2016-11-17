@@ -1,0 +1,28 @@
+Questions:
+1: Identifier les différents entités et leurs propriétés pour cette gestion
+		- Produit
+		- Clients
+		- Commande
+
+2: Préciser les différentes associations entre les enités et ajouter les propriétés pour les associations porteuses de propriétés.
+
+		- Un Client achete un à N produit
+		- Un produit est acheté par un à N Clients
+			Relation N-N création d'une table Commande : 
+		
+			- Le client passe une à N commandes
+			- Une commande est passé par un client
+
+			- Un commande contient un à N produits
+			- Un produit appartient à une commande
+
+3: Préciser les cardanlités pour les différentes associations : MCD.
+		
+		- Clients [1-N] Commandes
+		- Commandes [1-1] Clients
+
+		- Commande [1-N] Produits
+		- Produits [1-1] Commande
+
+
+
